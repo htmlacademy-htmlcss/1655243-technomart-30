@@ -10,7 +10,9 @@
 
   <header>
     <div>
-      <a href="index.html">Техномарт</a>
+      <a href="index.html">
+        <img src="https://via.placeholder.com/220x47" alt="Логотип">
+      </a>
       <form action="#" method="GET">
         <input type="search" placeholder="Поиск:">
       </form>
@@ -73,15 +75,28 @@
           <a href="#">Бесплатно</a>
         </li>
         <li>
-          <h3>Перфораторы</h3>
-          <p>Настоящие мужские игрушки</p>
-          <img src="https://via.placeholder.com/150x100" width="620" height="266" alt="Перфораторы">
+          <ul>
+            <li>
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+              <img src="https://via.placeholder.com/150x100" width="620" height="266" alt="Перфораторы">
+            </li>
+            <li>
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+              <img src="https://via.placeholder.com/150x100" width="620" height="266" alt="Дрели">
+            </li>
+          </ul>
           <button type="button">
             <img src="https://via.placeholder.com/21x39" alt="Назад">
           </button>
           <button type="button">
             <img src="https://via.placeholder.com/21x39" alt="Вперед">
           </button>
+          <div class="styder">
+            <button type="button">.</button>
+            <button type="button">.</button>
+          </div>
           <a href="#">Открыть каталог</a>
         </li>
       </ul>
@@ -173,11 +188,29 @@
       <button type="button">Гарантия</button>
       <button type="button">Кредит</button>
 
-      <h3>Доставка</h3>
-      <p>Мы с удовольствием доставим ваш товар прямо<br>
-        к вашему подъезду совершенно бесплатно!<br>
-        Ведь мы неплохо заработаем,<br>
-        поднимая его на ваш этаж!</p>
+      <div>
+        <h3>Доставка</h3>
+        <p>Мы с удовольствием доставим ваш товар прямо<br>
+          к вашему подъезду совершенно бесплатно!<br>
+          Ведь мы неплохо заработаем,<br>
+          поднимая его на ваш этаж!</p>
+      </div>
+
+      <div>
+        <h3>Гарантия</h3>
+        <p>Если купленный у нас товар поломается или заискрит,
+          а также в случае пожара,спровоцированного его
+          возгоранием, вы всегда можете быть уверены в нашей
+          гарантии.Мы обменяем сгоревший товар на новый.
+          Дом уж восстановите как-нибудь сами.</p>
+      </div>
+
+      <div>
+        <h3>Кредит</h3>
+        <p>Залезть в долговую яму стало проще!
+          Кредитные консультанты придут вам на помощь.</p>
+        <a href="#">Отправить заявку</a>
+      </div>
     </section>
 
     <section>
@@ -205,7 +238,9 @@
 
   <footer>
     <div>
-      <a href="index.html">Техномарт</a>
+      <a href="index.html">
+        <img src="https://via.placeholder.com/220x68" alt="Логотип">
+      </a>
       <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
         +7 (812) 555-05-55
       </p>
@@ -273,6 +308,26 @@
       </p>
     </div>
   </footer>
+
+  <section>
+    <h2>Обратная связь</h2>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label for="form-name">Ваше имя:</label>
+        <input id="form-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="form-email">Ваш e-mail:</label>
+        <input id="form-email" type="email" name="email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="form-text">Текст письма:</label>
+        <textarea id="form-text" name="text" placeholder="В свободной форме"></textarea>
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
+    <button type="button">Закрыть</button>
+  </section>
 </body>
 
 </html>
