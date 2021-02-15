@@ -1,0 +1,459 @@
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --pickled-bluewood-dark: #293449;
+  --pickled-bluewood-light: #32425C;
+  --picton-blue: #3BBCE3;
+  --light-orchid: #DC91D8;
+  --ebony-clay: #212A3A;
+  --brick-red: #CA2C37;
+  --feijoa: #8ED78F;
+  --gallery: #EAEAEA;
+  --merino: #F9F5F0;
+  --fiord: #405069;
+  --silver-chalice: #A9A9A9;
+  --white: #FFFFFF;
+  --black: #000000;
+  --special-yellow: #FFBF47;
+  --grandis: #FFD180;
+  --success: #5FBB2D;
+  --error: #BA2732;
+  --trans-white:rgb(255, 255, 255, 0.3);
+  --trans-greylight: rgb(197, 197, 197, 0.3)
+}
+
+body {
+  font-family: "Cuprum", sans-serif;
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--pickled-bluewood-light);
+}
+
+/* Header */
+
+.main-header {
+  background-color: var(--basic-background);
+}
+
+.header-menu {
+  background-color: var(--pickled-bluewood-dark);
+}
+
+.header-menu a {
+  color: var(--white);
+}
+
+.header-menu input {
+  background-color: transparent;
+  border: none;
+  color: var(--white)
+}
+
+.header-menu input::placeholder {
+  color: var(--white);
+}
+
+.technomart-logo {
+  display: inline-block;
+  line-height: 13px;
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.button-order {
+  display: inline-block;
+  background-color: var(--basic-green);
+}
+
+.button-order:hover {
+  background-color: var(--success);
+}
+
+.technomart-description {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red)
+}
+
+.contact-info a {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--basic-red);
+  border: 3px solid var(--white);
+}
+
+.contact-info span {
+  font-size: 14px;
+  color: var(--pickled-bluewood-light);
+  text-align: center;
+}
+
+.account-button {
+  display: inline-block;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.account-button:hover {
+  color: var(--basic-red);
+}
+
+.main-navigation {
+  background-color: var(--pickled-bluewood-light);
+  box-shadow: inset 0px -5px 0px var(--pickled-bluewood-dark);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation li:hover {
+  background-color: var(--pickled-bluewood-dark);
+}
+
+.navigation-item a {
+  color: var(--white);
+}
+
+/* Categories */
+
+.categories-list {
+  color: var(--white);
+  list-style: none;
+}
+
+.category-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.category-button {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  background-color: var(--trans-white);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.category-button:hover {
+  background-color: var(--trans-greylight);
+}
+
+.materials-category {
+  background-color: var(--special-yellow);
+}
+
+.tools-category {
+  background-color: var(--picton-blue);
+}
+
+.equipment-category {
+  background-color:var(--light-orchid);
+}
+
+.discounts-category {
+  background-color: var(--feijoa);
+}
+
+.delivery-category {
+  background-color:var(--special-yellow);
+}
+
+.slider-items {
+  list-style: none;
+}
+
+.slider-item h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.slider-item p {
+  color: var(--white);
+}
+
+.hammer-drills-item {
+  background-image: url(img/hammer-drills.jpg);
+  width: 620px;
+  height: 266px;
+  alt: "Перфораторы";
+}
+
+.drills-item {
+  background-image: url(img/drills.jpg);
+  width: 620px;
+  height: 266px;
+  alt: "Дрели";
+}
+
+.slider-dot {
+  display: inline-block;
+  background: var(--white);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border: none;
+}
+
+.slider-dot--active {
+  background: var(--basic-red);
+}
+
+.category-button:hover {
+  background-color: var(--brick-red);
+}
+
+/* Popular products */
+
+.products-header {
+  background-color: var(--merino);
+}
+
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--basic-red);
+  border: none;
+}
+
+.products-list {
+  list-style: none;
+  text-align: center;
+}
+
+.product-item {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  background-color: var(--white);
+  border: 1px solid var(--gallery);
+}
+
+.product-item h3 {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.product-item del {
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-greylight);
+}
+
+.product-item p {
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--basic-red);
+}
+
+/* Popular manufacturers */
+
+.manufacturers-header {
+  background-color: var(--merino);
+}
+
+.manufacturers-list {
+  list-style: none;
+}
+
+.manufacturer-item {
+  background: var(--white);
+  border: 1px solid var(--gallery);
+}
+
+/* Services */
+
+.services {
+  background-color: var(--basic-background);
+}
+
+.services h2 {
+  color: black;
+}
+
+.services p {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.service-button {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  background-color: var(--pickled-bluewood-light);
+  color: var(--white);
+  box-shadow: 0px 1px 0px var(--pickled-bluewood-dark), inset 0px 1px 0px var(--fiord);
+  border: none;
+}
+
+.service-button:hover {
+  background: var(--pickled-bluewood-dark);
+}
+
+.service-button--active {
+  background-color: var(--white);
+  box-shadow: 0px 1px 0px #FFFFFF;
+  color: var(--pickled-bluewood-light);
+}
+
+.service-category h3 {
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425C;
+}
+
+/* Company information */
+
+.company-info h2 {
+  color: var(--black);
+}
+
+.company-info p {
+  font-family: "PT Sans";
+  font-size: 13px;
+}
+
+.company-info ul {
+  list-style: none;
+}
+
+.company-info li::before {
+  content: "- ";
+  color: var(--basic-red);
+}
+
+/* Contacts */
+
+.contacts h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.contacts p {
+  font-family: "PT Sans";
+  font-size: 13px;
+}
+
+/* Footer */
+
+.footer-menu {
+  background-color: var(--pickled-bluewood-light);
+}
+
+.footer-menu p {
+  color: var(--white)
+}
+
+.footer-navigation ul {
+  list-style: none;
+}
+
+.footer-navigation__item a {
+  color: var(--white);
+}
+
+.footer-navigation__item a:hover {
+  text-decoration: underline;
+}
+
+.navigation-category-item a {
+  color: var(--grandis);
+}
+
+.navigation-category-item a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  background-color: var(--pickled-bluewood-dark);
+}
+
+.footer-container p {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  background: linear-gradient(0deg, var(--ebony-clay), var(--ebony-clay));
+}
+
+.social-button:hover {
+  background: var(--basic-red)
+}
+
+.footer-feedback,
+.footer-copyright {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-feedback a,
+.footer-copyright a {
+  color: var(--grandis);
+}
+
+.footer-feedback a:hover,
+.footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Feedback form */
+
+.feedback-modal input,
+.feedback-modal textarea {
+  border: 2px solid var(--basic-greylight);
+  border-radius: 2px;
+}
+
+.feedback-modal input::placeholder,
+.feedback-modal textarea::placeholder {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  color: var(--silver-chalice)
+}
