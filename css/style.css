@@ -1,28 +1,33 @@
 :root {
-  --basic-red: #EE3643;
-  --basic-green: #63A63E;
-  --basic-grey: #3D546F;
-  --basic-greylight: #C5C5C5;
-  --basic-background: #F1F5F7;
+  --basic-red: #ee3643;
+  --basic-green: #63a63e;
+  --basic-grey: #3d546f;
+  --basic-greylight: #c5c5c5;
+  --basic-background: #f1f5f7;
   --pickled-bluewood-dark: #293449;
-  --pickled-bluewood-light: #32425C;
-  --picton-blue: #3BBCE3;
-  --light-orchid: #DC91D8;
-  --ebony-clay: #212A3A;
-  --brick-red: #CA2C37;
-  --feijoa: #8ED78F;
-  --gallery: #EAEAEA;
-  --merino: #F9F5F0;
+  --pickled-bluewood-light: #32425c;
+  --picton-blue: #3bbce3;
+  --light-orchid: #dc91d8;
+  --ebony-clay: #212a3a;
+  --brick-red: #ca2c37;
+  --feijoa: #8ed78f;
+  --gallery: #eaeaea;
+  --merino: #f9f5f0;
   --fiord: #405069;
-  --silver-chalice: #A9A9A9;
-  --white: #FFFFFF;
+  --silver-chalice: #a9a9a9;
+  --tall-poppy: #ba2732;
+  --white: #ffffff;
   --black: #000000;
-  --special-yellow: #FFBF47;
-  --grandis: #FFD180;
-  --success: #5FBB2D;
-  --error: #BA2732;
-  --trans-white:rgb(255, 255, 255, 0.3);
-  --trans-greylight: rgb(197, 197, 197, 0.3)
+  --special-yellow: #ffbf47;
+  --grandis: #ffd180;
+  --mirage: #161d29;
+  --success: #5fbb2d;
+  --error: #ba2732;
+  --black-shadow: rgba(0, 0, 0, 0.24);
+  --trans-white: rgb(255, 255, 255, 0.3);
+  --trans-greylight: rgb(197, 197, 197, 0.3);
+  --trans-silver: rgb(169, 169, 169, 0.3);
+  --darkened-white: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -44,12 +49,9 @@ img {
   height: auto;
 }
 
-h2, h3 {
+.section-header {
   padding: 0;
   margin: 0;
-}
-
-h2 {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -72,19 +74,39 @@ h2 {
 
 .header-menu input {
   background-color: transparent;
+  outline: none;
   border: none;
-  color: var(--white)
+  color: var(--white);
+}
+
+.header-menu input:focus {
+  color: var(--black);
+  background-color: var(--white);
 }
 
 .header-menu input::placeholder {
   color: var(--white);
 }
 
+.header-menu input:focus::placeholder {
+  color: var(--black);
+}
+
 .technomart-logo {
   display: inline-block;
   line-height: 13px;
   background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--black-shadow);
+}
+
+.technomart-logo:focus {
+  background-color: var(--error);
+}
+
+.bookmarks:focus,
+.basket:focus {
+  color: var(--darkened-white);
+  background-color: var(--mirage);
 }
 
 .button-order {
@@ -96,10 +118,14 @@ h2 {
   background-color: var(--success);
 }
 
+.button-order:focus {
+  color: var(--darkened-white);
+}
+
 .technomart-description {
   font-size: 16px;
   line-height: 23px;
-  color: var(--basic-red)
+  color: var(--basic-red);
 }
 
 .contact-info a {
@@ -129,6 +155,10 @@ h2 {
   color: var(--basic-red);
 }
 
+.account-button:focus {
+  color: var(--basic-greylight);
+}
+
 .main-navigation {
   background-color: var(--pickled-bluewood-light);
   box-shadow: inset 0px -5px 0px var(--pickled-bluewood-dark);
@@ -146,6 +176,12 @@ h2 {
   color: var(--white);
 }
 
+.navigation-item a:focus {
+  color: var(--white);
+  opacity: 0.5;
+  background-color: var(--pickled-bluewood-dark);
+}
+
 /* Categories */
 
 .categories-list {
@@ -154,6 +190,8 @@ h2 {
 }
 
 .category-item h3 {
+  padding: 0;
+  margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -173,6 +211,10 @@ h2 {
   background-color: var(--trans-greylight);
 }
 
+.category-button:focus {
+  background-color: var(--trans-silver);
+}
+
 .materials-category {
   background-color: var(--special-yellow);
 }
@@ -182,7 +224,7 @@ h2 {
 }
 
 .equipment-category {
-  background-color:var(--light-orchid);
+  background-color: var(--light-orchid);
 }
 
 .discounts-category {
@@ -190,7 +232,7 @@ h2 {
 }
 
 .delivery-category {
-  background-color:var(--special-yellow);
+  background-color: var(--special-yellow);
 }
 
 .slider-items {
@@ -198,6 +240,8 @@ h2 {
 }
 
 .slider-item h3 {
+  padding: 0;
+  margin: 0;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -210,26 +254,27 @@ h2 {
 }
 
 .hammer-drills-item {
-  background-image: url(img/hammer-drills.jpg);
+  background-image: url(../img/hammer-drills.jpg);
   width: 620px;
   height: 266px;
   alt: "Перфораторы";
 }
 
 .drills-item {
-  background-image: url(img/drills.jpg);
+  background-image: url(../img/drills.jpg);
   width: 620px;
   height: 266px;
   alt: "Дрели";
 }
 
 .slider-dot {
+  padding: 0;
   display: inline-block;
   background: var(--white);
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  border: none;
+  border: 2px solid var(--white);
 }
 
 .slider-dot--active {
@@ -238,6 +283,10 @@ h2 {
 
 .catalog-button:hover {
   background-color: var(--brick-red);
+}
+
+.catalog-button:focus {
+  background-color: var(--tall-poppy);
 }
 
 /* Popular products */
@@ -269,6 +318,8 @@ h2 {
 }
 
 .product-item h3 {
+  padding: 0;
+  margin: 0;
   font-size: 18px;
   line-height: 20px;
 }
@@ -316,13 +367,18 @@ h2 {
   font-size: 13px;
 }
 
+.service-list {
+  list-style: none;
+}
+
 .service-button {
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
   background-color: var(--pickled-bluewood-light);
   color: var(--white);
-  box-shadow: 0px 1px 0px var(--pickled-bluewood-dark), inset 0px 1px 0px var(--fiord);
+  box-shadow: 0px 1px 0px var(--pickled-bluewood-dark),
+    inset 0px 1px 0px var(--fiord);
   border: none;
 }
 
@@ -330,16 +386,19 @@ h2 {
   background: var(--pickled-bluewood-dark);
 }
 
-.service-button--active {
+.service-button:focus {
+  outline: none;
   background-color: var(--white);
-  box-shadow: 0px 1px 0px #FFFFFF;
+  box-shadow: 0px 1px 0px var(--white);
   color: var(--pickled-bluewood-light);
 }
 
-.service-category h3 {
+.service-item h3 {
+  padding: 0;
+  margin: 0;
   font-size: 30px;
   line-height: 30px;
-  color: #32425C;
+  color: var(--pickled-bluewood-light);
 }
 
 /* Company information */
@@ -365,9 +424,7 @@ h2 {
 /* Contacts */
 
 .contacts h2 {
-  font-size: 30px;
-  line-height: 30px;
-  text-transform: uppercase;
+  color: var(--black);
 }
 
 .contacts p {
@@ -382,7 +439,7 @@ h2 {
 }
 
 .footer-menu p {
-  color: var(--white)
+  color: var(--white);
 }
 
 .footer-navigation ul {
@@ -393,16 +450,25 @@ h2 {
   color: var(--white);
 }
 
-.footer-navigation__item a:hover {
-  text-decoration: underline;
-}
-
 .navigation-category-item a {
   color: var(--grandis);
 }
 
+.footer-navigation__item a:hover,
 .navigation-category-item a:hover {
   text-decoration: underline;
+}
+
+.footer-navigation__item a:focus {
+  color: var(--basic-background);
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.navigation-category-item a:focus {
+  color: var(--grandis);
+  opacity: 0.5;
+  text-decoration: none;
 }
 
 .footer-container {
@@ -420,11 +486,18 @@ h2 {
 }
 
 .social-button {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(0deg, var(--ebony-clay), var(--ebony-clay));
 }
 
-.social-button:hover {
-  background: var(--basic-red)
+.social-button:hover,
+.social-button:focus {
+  background: var(--basic-red);
 }
 
 .footer-feedback,
@@ -443,17 +516,19 @@ h2 {
   text-decoration: underline;
 }
 
+.footer-feedback a:focus,
+.footer-copyright a:focus {
+  color: var(--error);
+  text-decoration: none;
+}
+
 /* Feedback form */
 
 .feedback-modal input,
 .feedback-modal textarea {
-  border: 2px solid var(--basic-greylight);
-  border-radius: 2px;
-}
-
-.feedback-modal input::placeholder,
-.feedback-modal textarea::placeholder {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
-  color: var(--silver-chalice)
+  color: var(--silver-chalice);
+  border: 2px solid var(--basic-greylight);
+  border-radius: 2px;
 }
