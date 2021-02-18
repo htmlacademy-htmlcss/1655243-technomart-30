@@ -24,6 +24,7 @@
   --success: #5fbb2d;
   --error: #ba2732;
   --black-shadow: rgba(0, 0, 0, 0.24);
+  --black-shadow-light: rgba(0, 0, 0, 0.2);
   --trans-white: rgb(255, 255, 255, 0.3);
   --trans-greylight: rgb(197, 197, 197, 0.3);
   --trans-silver: rgb(169, 169, 169, 0.3);
@@ -99,12 +100,12 @@ img {
   box-shadow: inset 0px -5px 0px var(--black-shadow);
 }
 
-.technomart-logo:focus {
+.technomart-logo:active {
   background-color: var(--error);
 }
 
-.bookmarks:focus,
-.basket:focus {
+.bookmarks:active,
+.basket:active {
   color: var(--darkened-white);
   background-color: var(--mirage);
 }
@@ -114,11 +115,12 @@ img {
   background-color: var(--basic-green);
 }
 
-.button-order:hover {
+.button-order:hover,
+.button-order:focus {
   background-color: var(--success);
 }
 
-.button-order:focus {
+.button-order:active {
   color: var(--darkened-white);
 }
 
@@ -151,11 +153,12 @@ img {
   background-color: var(--white);
 }
 
-.account-button:hover {
+.account-button:hover,
+.account-button:focus {
   color: var(--basic-red);
 }
 
-.account-button:focus {
+.account-button:active {
   color: var(--basic-greylight);
 }
 
@@ -168,7 +171,8 @@ img {
   list-style: none;
 }
 
-.site-navigation li:hover {
+.site-navigation li:hover,
+.site-navigation li:focus {
   background-color: var(--pickled-bluewood-dark);
 }
 
@@ -176,7 +180,7 @@ img {
   color: var(--white);
 }
 
-.navigation-item a:focus {
+.navigation-item a:active {
   color: var(--white);
   opacity: 0.5;
   background-color: var(--pickled-bluewood-dark);
@@ -207,11 +211,12 @@ img {
   text-transform: uppercase;
 }
 
-.category-button:hover {
+.category-button:hover,
+.category-button:focus {
   background-color: var(--trans-greylight);
 }
 
-.category-button:focus {
+.category-button:active {
   background-color: var(--trans-silver);
 }
 
@@ -281,11 +286,12 @@ img {
   background: var(--basic-red);
 }
 
-.catalog-button:hover {
+.catalog-button:hover,
+.catalog-button:focus {
   background-color: var(--brick-red);
 }
 
-.catalog-button:focus {
+.catalog-button:active {
   background-color: var(--tall-poppy);
 }
 
@@ -352,6 +358,16 @@ img {
   border: 1px solid var(--gallery);
 }
 
+.manufacturer-item:hover,
+.manufacturer-item:focus {
+  box-shadow: 0 0 10px var(--black-shadow);
+}
+
+.manufacturer-item:active {
+  opacity: 0.5;
+  box-shadow: 0 0 10px var(--black-shadow-light);
+}
+
 /* Services */
 
 .services {
@@ -382,12 +398,13 @@ img {
   border: none;
 }
 
-.service-button:hover {
+.service-button:hover,
+.service-button:focus {
+  outline: none;
   background: var(--pickled-bluewood-dark);
 }
 
-.service-button:focus {
-  outline: none;
+.service-button:active {
   background-color: var(--white);
   box-shadow: 0px 1px 0px var(--white);
   color: var(--pickled-bluewood-light);
@@ -455,17 +472,19 @@ img {
 }
 
 .footer-navigation__item a:hover,
-.navigation-category-item a:hover {
+.navigation-category-item a:hover,
+.footer-navigation__item a:focus,
+.navigation-category-item a:focus {
   text-decoration: underline;
 }
 
-.footer-navigation__item a:focus {
+.footer-navigation__item a:active {
   color: var(--basic-background);
   opacity: 0.5;
   text-decoration: none;
 }
 
-.navigation-category-item a:focus {
+.navigation-category-item a:active {
   color: var(--grandis);
   opacity: 0.5;
   text-decoration: none;
@@ -496,7 +515,8 @@ img {
 }
 
 .social-button:hover,
-.social-button:focus {
+.social-button:focus,
+.social-button:active {
   background: var(--basic-red);
 }
 
@@ -512,12 +532,14 @@ img {
 }
 
 .footer-feedback a:hover,
-.footer-copyright a:hover {
+.footer-copyright a:hover,
+.footer-feedback a:focus,
+.footer-copyright a:focus {
   text-decoration: underline;
 }
 
-.footer-feedback a:focus,
-.footer-copyright a:focus {
+.footer-feedback a:active,
+.footer-copyright a:active {
   color: var(--error);
   text-decoration: none;
 }
