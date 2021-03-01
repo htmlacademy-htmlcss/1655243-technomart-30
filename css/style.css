@@ -27,8 +27,7 @@
   --bilbao: #367315;
   --apple: #518534;
   --error: #ba2732;
-  --black-shadow: rgba(0, 0, 0, 0.24);
-  --black-shadow-light: rgba(0, 0, 0, 0.2);
+  --black-shadow: rgba(0, 0, 0, 0.15);
   --trans-black: rgba(0, 0, 0, 0.3);
   --trans-white: rgb(255, 255, 255, 0.3);
   --trans-greylight: rgb(197, 197, 197, 0.3);
@@ -60,6 +59,7 @@ img {
   margin: 0;
   font-size: 30px;
   line-height: 30px;
+  font-weight: inherit;
   text-transform: uppercase;
   color: var(--pickled-bluewood-light);
 }
@@ -411,11 +411,11 @@ img {
   background-color: var(--white);
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 400;
 }
 
 .bookmarks-button:hover,
 .bookmarks-button:focus {
+  outline: none;
   border: 3px solid var(--pickled-bluewood-light);
 }
 
@@ -441,12 +441,12 @@ img {
 
 .manufacturer-item:hover,
 .manufacturer-item:focus {
-  box-shadow: 0 0 10px var(--black-shadow);
+  filter: drop-shadow(0px 4px 20px var(--black-shadow));
 }
 
 .manufacturer-item:active {
   opacity: 0.5;
-  box-shadow: 0 0 10px var(--black-shadow-light);
+  filter: drop-shadow(0px 4px 20px var(--black-shadow));
 }
 
 /* Services */
@@ -638,6 +638,15 @@ img {
 
 /* Catalog page */
 
+.page-title {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--pickled-bluewood-light);
+  background-color: var(--basic-background);
+  font-weight: 400;
+}
+
 .breadcrumbs {
   list-style: none;
 }
@@ -646,42 +655,35 @@ img {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
+  text-transform: uppercase;
 }
 
 .breadcrumbs a {
   color: var(--black);
 }
 
-.page-title {
-  font-size: 30px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: var(--pickled-bluewood-light);
-  background-color: var(--basic-background);
-}
-
 /* Filters */
 
-.filters h2 {
+.filters {
   font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.filters h2 {
   font-size: 13px;
   line-height: 18px;
-  text-transform: uppercase;
   font-weight: 400;
   background-color: var(--ecru-white);
 }
 
 .filter legend {
-  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
-  text-transform: uppercase;
 }
 
 .filter ul {
   list-style: none;
-  font-family: "PT Sans", sans-serif;
   line-height: 19px;
   font-size: 15px;
 }
@@ -690,21 +692,18 @@ img {
   background-color: var(--ecru-white);
   border: none;
   text-align: center;
-  font-family: "PT Sans", sans-serif;
   font-size: 17px;
 }
 
 .filter-checkbox label,
 .filter-radio label {
-  font-family: "PT Sans", sans-serif;
   font-size: 15px;
   line-height: 19px;
-  text-transform: uppercase;
 }
 
 .filter-button {
+  font-family: inherit;
   background-color: var(--white);
-  font-family: "PT Sans", sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   border: 1px solid var(--mercury);
@@ -712,24 +711,26 @@ img {
 
 /* Sorting */
 
-.sort h2 {
+.sort {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
-  text-transform: uppercase;
   font-weight: 400;
+}
+
+.sort h2 {
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: uppercase;
   background-color: var(--ecru-white);
 }
 
 .sort-list {
   list-style: none;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 18px;
 }
 
 .sort-item button {
-  font-family: "PT Sans", sans-serif;
+  font-family: inherit;
   border: none;
   color: var(--trans-black);
   background-color: var(--white);
@@ -790,12 +791,11 @@ img {
 }
 
 .pagination-item a {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  color: var(--black);
   border: 1px solid var(--mercury);
   border-radius: 2px;
-  color: var(--black);
-  font-size: 13px;
-  font-weight: 400;
-  font-family: "PT Sans", sans-serif;
 }
 
 .pagination-item a:hover,
@@ -825,15 +825,13 @@ img {
 .about-punchers h2 {
   font-size: 30px;
   line-height: 30px;
-  font-weight: 400;
+  font-weight: inherit;
   text-transform: uppercase;
 }
 
 .about-punchers p {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
-  line-height: 24px;
-  font-weight: 400;
 }
 
 /* Notification modal */
@@ -847,5 +845,4 @@ img {
   color: var(--black);
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 18px;
 }
