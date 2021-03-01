@@ -10,6 +10,7 @@
   --light-orchid: #dc91d8;
   --ebony-clay: #212a3a;
   --brick-red: #ca2c37;
+  --ecru-white: #f7f3ec;
   --feijoa: #8ed78f;
   --gallery: #eaeaea;
   --merino: #f9f5f0;
@@ -21,6 +22,7 @@
   --special-yellow: #ffbf47;
   --grandis: #ffd180;
   --mirage: #161d29;
+  --mercury: #e5e5e5;
   --success: #5fbb2d;
   --error: #ba2732;
   --black-shadow: rgba(0, 0, 0, 0.24);
@@ -100,6 +102,14 @@ img {
   box-shadow: inset 0px -5px 0px var(--black-shadow);
 }
 
+.basket {
+  background-color: var(--basic-red);
+}
+
+.basket--empty {
+  background-color: var(--pickled-bluewood-dark);
+}
+
 .technomart-logo:active {
   background-color: var(--error);
 }
@@ -159,6 +169,35 @@ img {
 }
 
 .account-button:active {
+  color: var(--basic-greylight);
+}
+
+.account-user {
+  background-color: var(--white);
+}
+
+.account-user a {
+  color: var(--black);
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.account-user a:active {
+  color: var(--basic-greylight);
+}
+
+.user-button {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--pickled-bluewood-light);
+}
+
+.user-button:hover,
+.user-button:focus {
+  color: var(--basic-red);
+}
+
+.user-button:active {
   color: var(--basic-greylight);
 }
 
@@ -553,4 +592,78 @@ img {
   color: var(--silver-chalice);
   border: 2px solid var(--basic-greylight);
   border-radius: 2px;
+}
+
+/* Catalog page */
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs li {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.breadcrumbs a {
+  color: var(--black);
+}
+
+.page-title {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--pickled-bluewood-light);
+  background-color: var(--basic-background);
+}
+
+/* Filters */
+
+.filters h2 {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: var(--ecru-white);
+}
+
+.filter legend {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter ul {
+  list-style: none;
+  font-family: "PT Sans", sans-serif;
+  line-height: 19px;
+  font-size: 15px;
+}
+
+.filter-input {
+  background-color: var(--ecru-white);
+  border: none;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+}
+
+.filter-checkbox label,
+.filter-radio label {
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.filter-button {
+  background-color: var(--white);
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  border: 1px solid var(--mercury);
 }
