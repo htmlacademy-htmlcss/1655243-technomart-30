@@ -101,7 +101,7 @@
           <h3>Доставка</h3>
           <a href="#" class="category-button">Бесплатно</a>
         </li>
-        <li class="category-item">
+        <li class="category-item slider-category">
           <div class="slider">
             <ul class="slider-items">
               <li class="slider-item hammer-drills-item">
@@ -109,18 +109,20 @@
                 <p>Настоящие мужские игрушки</p>
                 <a href="#" class="button catalog-button">Открыть каталог</a>
               </li>
-              <li class="slider-item drills-item">
+              <!-- <li class="slider-item drills-item">
                 <h3>Дрели</h3>
                 <p>Соседям на радость!</p>
                 <a href="#" class="button catalog-button">Открыть каталог</a>
-              </li>
+              </li> -->
             </ul>
-            <a href="#">
-              <img src="img/icons/left-icon.svg" height="40" width="22" alt="Предыдущий каталог">
-            </a>
-            <a href="#">
-              <img src="img/icons/right-icon.svg" height="40" width="22" alt="Следующий каталог">
-            </a>
+            <div class="slider-arrows">
+              <a href="#">
+                <img src="img/icons/left-icon.svg" height="40" width="22" alt="Предыдущий каталог">
+              </a>
+              <a href="#">
+                <img src="img/icons/right-icon.svg" height="40" width="22" alt="Следующий каталог">
+              </a>
+            </div>
             <div class="styder">
               <button type="button" class="slider-dot"></button>
               <button type="button" class="slider-dot slider-dot--active"></button>
@@ -213,9 +215,11 @@
     </section>
 
     <section class="services">
-      <h2 class="section-header">Сервисы</h2>
-      <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
-        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+      <div class="services-header">
+        <h2 class="section-header">Сервисы</h2>
+        <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+      </div>
       <section class="service-categories">
         <button type="button" class="service-button" autofocus>Доставка</button>
         <button type="button" class="service-button">Гарантия</button>
@@ -231,7 +235,7 @@
             поднимая его на ваш этаж!</p>
           <img src="img/delivery.png" width="486" height="261" alt="Доставка">
         </li>
-        <li class="service-item">
+        <!-- <li class="service-item">
           <h3>Гарантия</h3>
           <p>Если купленный у нас товар поломается или заискрит,<br>
             а также в случае пожара,спровоцированного его<br>
@@ -246,32 +250,34 @@
             Кредитные консультанты придут вам на помощь.</p>
           <a href="#" class="button">Отправить заявку</a>
           <img src="img/credit.png" width="465" height="285" alt="Кредит">
-        </li>
+        </li> -->
       </ul>
     </section>
 
-    <section class="company-info">
-      <h2 class="section-header">Компания «Техномарт»</h2>
-      <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
-        ремонта и строительства не оставит равнодушными любителей сэкономить на<br>
-        гастарбайтерах.</p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-        Техномарт работает со многими транспортными компаниями:</p>
-      <ul>
-        <li>Деловые линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a href="#" class="button">Подробнее о компании</a>
-    </section>
+    <div class="index-columns">
+      <section class="company-info">
+        <h2 class="section-header">Компания «Техномарт»</h2>
+        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
+          ремонта и строительства не оставит равнодушными любителей сэкономить на<br>
+          гастарбайтерах.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+          Техномарт работает со многими транспортными компаниями:</p>
+        <ul>
+          <li>Деловые линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a href="#" class="button">Подробнее о компании</a>
+      </section>
 
-    <section class="contacts">
-      <h2 class="section-header">Контакты</h2>
-      <p>Вы можете забрать товар сами,<br>
-        заехав в наш офис:</p>
-      <a href="#" class="button">Заблудились? Напишите нам!</a>
-      <img src="img/map.jpg" width="300" height="158" alt="Карта с местоположением офиса">
-    </section>
+      <section class="contacts">
+        <h2 class="section-header">Контакты</h2>
+        <p>Вы можете забрать товар сами,<br>
+          заехав в наш офис:</p>
+        <a href="#" class="button">Заблудились? Напишите нам!</a>
+        <img src="img/map.jpg" width="300" height="158" alt="Карта с местоположением офиса">
+      </section>
+    </div>
   </main>
 
   <footer class="main-footer">
@@ -340,30 +346,34 @@
           </li>
         </ul>
       </section>
-      <p class="footer-feedback">Обратная связь:<br>
-        <a href="#">mail@htmlacademy.ru</a>
-      </p>
-      <p class="footer-copyright">Разработано - <br>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-      </p>
+      <section class="footer-additional-info">
+        <p class="footer-feedback">Обратная связь:<br>
+          <a href="#">mail@htmlacademy.ru</a>
+        </p>
+        <p class="footer-copyright">Разработано - <br>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </p>
+      </section>
     </div>
   </footer>
 
   <section class="feedback-modal">
     <h2 class="section-header">Обратная связь</h2>
     <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
-      <p class="feedback-item">
-        <label for="feedback-name">Ваше имя:</label>
-        <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
-      </p>
-      <p class="feedback-item">
-        <label for="feedback-email">Ваш e-mail:</label>
-        <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
-      </p>
-      <p class="feedback-item">
-        <label for="feedback-text">Текст письма:</label>
-        <textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
-      </p>
+      <div class="feedback-items">
+        <p class="feedback-item">
+          <label for="feedback-name">Ваше имя:</label>
+          <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p class="feedback-item">
+          <label for="feedback-email">Ваш e-mail:</label>
+          <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p class="feedback-item">
+          <label for="feedback-text">Текст письма:</label>
+          <textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
+        </p>
+      </div>
       <button type="submit" class="button">Отправить</button>
     </form>
     <a href="#">

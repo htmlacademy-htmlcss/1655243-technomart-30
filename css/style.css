@@ -54,6 +54,17 @@ img {
   height: auto;
 }
 
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
 .section-header {
   padding: 0;
   margin: 0;
@@ -65,10 +76,6 @@ img {
 }
 
 /* Header */
-
-.main-header {
-  background-color: var(--basic-background);
-}
 
 .header-menu {
   background-color: var(--pickled-bluewood-dark);
@@ -231,8 +238,17 @@ img {
 /* Categories */
 
 .categories-list {
+  display: grid;
+  grid-template-areas:
+    "materials tools equipment"
+    "slider slider discounts"
+    "slider slider delivery";
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 20px;
   color: var(--white);
   list-style: none;
+  justify-content: center;
 }
 
 .category-item h3 {
@@ -263,27 +279,61 @@ img {
 }
 
 .materials-category {
+  grid-area: materials;
   background-color: var(--special-yellow);
 }
 
 .tools-category {
+  grid-area: tools;
   background-color: var(--picton-blue);
 }
 
 .equipment-category {
+  grid-area: equipment;
   background-color: var(--light-orchid);
 }
 
 .discounts-category {
+  grid-area: discounts;
   background-color: var(--feijoa);
 }
 
 .delivery-category {
+  grid-area: delivery;
   background-color: var(--special-yellow);
+}
+
+.slider {
+  position: relative;
+}
+
+.slider-arrows {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 122px;
+  left: 24px;
+  right: 20px;
+  bottom: 104px;
+}
+
+.styder {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 220px;
+  left: 295px;
+  right: 295px;
+  bottom: 36px;
+}
+
+.slider-category {
+  grid-area: slider;
 }
 
 .slider-items {
   list-style: none;
+  padding: 0;
 }
 
 .slider-item h3 {
@@ -328,6 +378,17 @@ img {
   background: var(--basic-red);
 }
 
+.catalog-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 201px;
+  left: 24px;
+  right: 404px;
+  bottom: 27px;
+}
+
 .catalog-button:hover,
 .catalog-button:focus {
   background-color: var(--brick-red);
@@ -356,6 +417,9 @@ img {
 .products-list {
   list-style: none;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .product-item {
@@ -363,6 +427,8 @@ img {
   font-weight: 700;
   background-color: var(--white);
   border: 1px solid var(--gallery);
+  display: grid;
+  grid-template-rows: 1fr min-content;
 }
 
 .product-item h3 {
@@ -433,11 +499,16 @@ img {
 }
 
 .manufacturers-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
   list-style: none;
 }
 
 .manufacturer-item {
   background: var(--white);
+  min-height: 143px;
   border: 1px solid var(--gallery);
 }
 
@@ -454,7 +525,13 @@ img {
 /* Services */
 
 .services {
+  display: grid;
+  grid-template-columns: 240px 1fr;
   background-color: var(--basic-background);
+}
+
+.services-header {
+  grid-column: 1 / -1;
 }
 
 .services h2 {
@@ -499,6 +576,13 @@ img {
   font-size: 30px;
   line-height: 30px;
   color: var(--pickled-bluewood-light);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.index-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Company information */
@@ -543,6 +627,7 @@ img {
 }
 
 .footer-navigation ul {
+  margin: 0;
   list-style: none;
 }
 
@@ -574,6 +659,8 @@ img {
 }
 
 .footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   background-color: var(--pickled-bluewood-dark);
 }
 
@@ -583,7 +670,17 @@ img {
   color: var(--white);
 }
 
+.footer-social {
+  justify-self: center;
+}
+
+.footer-additional-info {
+  justify-self: end;
+}
+
 .footer-social ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -636,6 +733,17 @@ img {
   color: var(--silver-chalice);
   border: 2px solid var(--basic-greylight);
   border-radius: 2px;
+}
+
+.feedback-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 13px;
+}
+
+.feedback-item:nth-child(3) {
+  grid-column: 1 / -1;
 }
 
 /* Catalog page */
